@@ -1,9 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
+import Users from '../src/view/Dashboard/Users/Users';
 import './App.css';
 import Dashboard from './view/Dashboard/Dashboard';
 import Home from './view/Home/Home.';
 import Login from './view/Login/Login';
 import SignUp from './view/SignUp/SignUp';
+
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/register' element= {<SignUp/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}>
+        <Route path='users' element={<Users/>}/>
+        </Route>
       </Routes>
       
     </div>

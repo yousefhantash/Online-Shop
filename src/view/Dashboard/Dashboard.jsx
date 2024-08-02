@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
@@ -9,7 +10,9 @@ export default function Dashboard(){
             <Topbar/>
             <div className="flex ">
             <Sidebar/>
-            test
+            <div className="w-[85%]">
+            <Outlet/>
+            </div>
             </div>
         </div>
 

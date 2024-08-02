@@ -13,6 +13,7 @@ export default function Navbar(){
         <div className='w-full px-[90px] shadow-xl'>
         <nav className='flex justify-between items-center'>
             <div className='flex justify-between items-center'>
+               <Link to='/'> <img src='https://upload.wikimedia.org/wikipedia/commons/f/f7/IATAlogo.svg' alt='at' className='w-[90px] mr-[30px] my-[10px]'/></Link>
                 <Link to='/' className='p-[10px] text-[20px] font-bold text-slate-900 '>Home</Link>
                 <Link to='/About' className='p-[10px] text-[20px] font-bold text-slate-900 '>About</Link>
                 <Link to='/Contact' className='p-[10px] text-[20px] font-bold text-slate-900 '>Contact Us</Link>
