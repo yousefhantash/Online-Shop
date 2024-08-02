@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 import './signup.css';
-
 export default function SignUp(){
 
 const [name,setName] = useState('');
@@ -41,8 +41,11 @@ setEmailError(err.response.status);
 }
 
 return(
-    <div className="flex justify-center items-center h-[80vh] flex-col">
-    <img src='https://upload.wikimedia.org/wikipedia/commons/f/f7/IATAlogo.svg' alt='at' className='w-[200px] mb-4'/>
+    <>
+    <Navbar/>
+    <div className="flex justify-center items-center flex-col">
+    
+    <img src='https://upload.wikimedia.org/wikipedia/commons/f/f7/IATAlogo.svg' alt='at' className='w-[200px] mt-10 mb-4'/>
      <div className='register'>
         <form onSubmit={Submit} className="w-[400px] p-[20px] shadow-2xl">
             <label htmlFor="name">Name</label>
@@ -63,5 +66,6 @@ return(
         </form>
      </div>
     </div>
+    </>
     );
 }

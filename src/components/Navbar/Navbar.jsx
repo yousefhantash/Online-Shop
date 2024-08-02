@@ -10,7 +10,7 @@ export default function Navbar(){
 
     return(
 
-    <div className='container shadow-xl  w-full'>
+        <div className='w-full px-[90px] shadow-xl'>
         <nav className='flex justify-between items-center'>
             <div className='flex justify-between items-center'>
                 <Link to='/' className='p-[10px] text-[20px] font-bold text-slate-900 '>Home</Link>

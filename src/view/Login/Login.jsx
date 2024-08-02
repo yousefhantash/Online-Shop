@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 import './login.css';
 
 export default function Login(){
@@ -39,9 +40,11 @@ setEmailError(err.response.status);
 
 return(
     
-    
-    <div className="flex justify-center items-center h-[80vh] flex-col ">
-     <img src='https://upload.wikimedia.org/wikipedia/commons/f/f7/IATAlogo.svg' alt='at' className='w-[200px] mb-4'/>
+    <div>
+    <Navbar/>
+    <div className="flex justify-center items-center flex-col ">
+     
+     <img src='https://upload.wikimedia.org/wikipedia/commons/f/f7/IATAlogo.svg' alt='at' className='w-[200px]  mt-24 mb-4'/>
      <div className='login'>
         <form onSubmit={Submit} className="w-[400px] p-[20px] shadow-2xl">
             
@@ -59,7 +62,7 @@ return(
         </form>
      </div>
     </div>
-    
+    </div>
     );
 
 }
