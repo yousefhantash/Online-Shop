@@ -16,6 +16,8 @@ export default function Users(){
     .then((data) => setUsers(data));
     },[runUseEffect]);
 
+   
+
     const showUsers = users.map((user , index) => 
     <tr key={index}>
         <td>{index + 1}</td>
@@ -24,7 +26,7 @@ export default function Users(){
         <td>
             <Link to={`${user.id}`}>
             <i 
-            class="fa-regular fa-pen-to-square 
+            className="fa-regular fa-pen-to-square 
             text-green-500 
             p-2 text-[20px] 
             cursor-pointer">
@@ -32,7 +34,7 @@ export default function Users(){
             </Link>
             <i
              onClick={() =>deleteUser(user.id)} 
-            class="fa-solid fa-trash 
+            className="fa-solid fa-trash 
             text-red-600 
             p-2 
             text-[20px] 
@@ -57,12 +59,12 @@ async function deleteUser(id){
             <table>
 
                 <thead>
-                    
+                     <tr>
                         <th>Id</th>
                         <th>User</th>
                         <th>Email</th>
                         <th>Action</th>
-                    
+                    </tr>
                 </thead>    
                 <tbody>{showUsers}</tbody>
             </table>
